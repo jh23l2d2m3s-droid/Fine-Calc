@@ -1,0 +1,90 @@
+/* Mobile first. Paleta y tipografías tomadas de finanClick. */
+:root{
+  --blue:#1e60f3; --blue-d:#0048c9; --green:#006c49; --purple:#632dcc;
+  --ink:#131b2e; --muted:#64748b; --line:#e2e8f0; --bg:#f1f5f9; --card:#fff; --danger:#b91c1c;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+h1,h2,.brand,.hero-result strong{font-family:'Plus Jakarta Sans',Inter,sans-serif}
+.shell{width:100%;max-width:1040px;margin:0 auto;padding:0 16px}
+
+.header{background:#fff;border-bottom:1px solid var(--line)}
+.header-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 16px;padding-top:12px;padding-bottom:12px}
+.header p{margin:0;font-size:.8rem;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.1rem}
+.logo{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--blue-d);color:#fff;font-size:1rem}
+.badge{font:700 .625rem Inter,sans-serif;color:var(--blue-d);background:#eff6ff;border:1px solid #bfdbfe;border-radius:99px;padding:2px 8px}
+
+.intro{padding:24px 0 12px}
+.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.08em;color:var(--blue-d)}
+h1{margin:.25rem 0;font-size:1.6rem;line-height:1.15}
+.intro p{margin:0;color:var(--muted)}
+
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.tab{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px 8px;min-height:44px;font:600 .85rem Inter,sans-serif;color:#475569;cursor:pointer;transition:.15s}
+.tab:hover{background:#f8fafc}
+.tab.active{color:#fff;border-color:transparent;box-shadow:0 4px 12px -4px rgba(0,0,0,.3)}
+.t-loan.active{background:var(--green)} .t-simple.active{background:var(--purple)}
+.t-compound.active{background:var(--blue)} .t-savings.active{background:var(--blue-d)}
+
+.error{background:#fef2f2;border:1px solid #fecaca;color:var(--danger);border-radius:12px;padding:12px 14px;margin:0 0 12px;font-weight:500}
+.layout{display:grid;gap:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.panel h2{margin:0 0 14px;font-size:1.1rem}
+
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+label{font-size:.8rem;font-weight:600}
+.input-wrap{display:flex;align-items:center;border:1px solid #cbd5e1;border-radius:12px;background:#fff;transition:.15s}
+.input-wrap:focus-within,select:focus{border-color:var(--blue-d);box-shadow:0 0 0 3px rgba(30,96,243,.15)}
+.prefix{padding:0 4px 0 14px;font-weight:700;color:#94a3b8;font-size:.9rem}
+input,select{width:100%;font:500 1rem Inter,sans-serif;padding:12px 14px;border:0;background:transparent;color:var(--ink);outline:none;min-height:44px}
+select{border:1px solid #cbd5e1;border-radius:12px;background:#fff}
+small{color:var(--muted);font-size:.75rem}
+
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+button{font-family:inherit}
+.primary,.secondary{flex:1;min-height:46px;border-radius:12px;font-weight:700;font-size:.9rem;cursor:pointer;padding:0 16px;transition:.15s}
+.primary{background:var(--blue);color:#fff;border:0;box-shadow:0 4px 12px -4px rgba(30,96,243,.5)}
+.primary:hover{background:var(--blue-d)} .primary:active{transform:scale(.98)}
+.secondary{background:#fff;color:#334155;border:1px solid #cbd5e1}
+.secondary:hover{background:#f8fafc}
+:focus-visible{outline:3px solid rgba(30,96,243,.45);outline-offset:2px}
+.link{background:none;border:0;color:var(--blue-d);font-weight:600;font-size:.85rem;cursor:pointer;padding:8px 0;min-height:44px}
+
+.empty{display:grid;place-items:center;text-align:center;color:var(--muted);min-height:220px}
+.empty-icon{font-size:2.4rem;color:#94a3b8}
+.empty h2{margin-bottom:4px;color:var(--ink)} .empty p{margin:0}
+
+.hero-result{background:linear-gradient(135deg,var(--blue-d),var(--blue));color:#fff;border-radius:14px;padding:18px;margin-bottom:12px;display:flex;flex-direction:column;gap:4px}
+.hero-result span{font-size:.8rem;opacity:.85}
+.hero-result strong{font-size:1.7rem;overflow-wrap:anywhere}
+.metric{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.metric span{color:var(--muted)} .metric strong{text-align:right}
+.results .actions{margin-top:14px}
+.toast{min-height:1.2em;margin:6px 0 0;font-size:.8rem;color:var(--green);font-weight:600}
+.disclaimer{font-size:.75rem;color:var(--muted);margin:12px 0 0}
+
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;max-height:320px;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:.78rem;white-space:nowrap}
+th,td{padding:8px 10px;text-align:right} th:first-child,td:first-child{text-align:left}
+thead th{position:sticky;top:0;background:#f8fafc;font-weight:700;color:#475569}
+tbody tr:nth-child(even){background:#f8fafc}
+
+.history{margin-top:16px}
+.history-head{display:flex;justify-content:space-between;align-items:center}
+.history ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.history li{display:flex;gap:6px;align-items:stretch}
+.history-item{flex:1;text-align:left;display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);background:#f8fafc;border-radius:12px;padding:10px 12px;cursor:pointer;min-height:44px}
+.history-item:hover{background:#eff6ff}
+.h-type{font-size:.7rem;font-weight:700;color:var(--blue-d);text-transform:uppercase;letter-spacing:.05em}
+.h-main{font-size:.9rem} .h-sub{font-size:.75rem;color:var(--muted)}
+.icon-btn{width:44px;border:1px solid var(--line);background:#fff;border-radius:12px;color:#94a3b8;cursor:pointer}
+.icon-btn:hover{color:var(--danger);border-color:#fecaca}
+
+.footer{text-align:center;color:var(--muted);font-size:.8rem;padding:24px 16px}
+
+@media (min-width:520px){.tabs{grid-template-columns:repeat(4,1fr)} h1{font-size:2rem}}
+@media (min-width:720px){.layout{grid-template-columns:1fr 1fr;align-items:start} .hero-result strong{font-size:2rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
